@@ -1,6 +1,11 @@
+//importing user collection
 import User from "../Models/user_schema.js";
+
+//importing validator for email and url check
 import validator from "validator";
 
+
+//fetching all user data and filtering user method
 export const fetchUsers = async(req, res)=>{
     try {
 
@@ -31,6 +36,7 @@ export const fetchUsers = async(req, res)=>{
     }
 }
 
+//fetching particular user by ID method
 export const fetchUserById = async (req, res) => {
     try {
 
@@ -53,6 +59,7 @@ export const fetchUserById = async (req, res) => {
     }
   };
 
+//creating new user method
 export const createUser = async(req, res)=>{
     try {
         
@@ -98,6 +105,7 @@ export const createUser = async(req, res)=>{
     }
 }
 
+//updating user method
 export const updateUserById = async(req, res)=>{
     try {
 
@@ -148,6 +156,7 @@ export const updateUserById = async(req, res)=>{
     }
 }
 
+//deleting user method
 export const deleteUserById = async(req, res)=>{
     try {
         const userId = parseInt(req.params.id);

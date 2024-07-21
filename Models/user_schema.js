@@ -1,5 +1,7 @@
+//importing mongoose to create schema
 import mongoose from "mongoose";
 
+//defining user schema
 const userSchema = new mongoose.Schema({
     userId : { type: Number, unique: true },
     firstName : {
@@ -40,6 +42,8 @@ const userSchema = new mongoose.Schema({
     },
 });
 
+//creating model for user
 const User = mongoose.model('User', userSchema);
 
+//exporting the user model
 export default User;
