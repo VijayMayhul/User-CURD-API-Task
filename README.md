@@ -48,7 +48,7 @@ This is the User-CRUD API, designed and developed as part of my interview. This 
 
 ## API Documentation
 
-[Click here to view API Documentation]()
+[Click here to view API Documentation](https://documenter.getpostman.com/view/24200691/2sA3kUHha9)
 
 ## Setup
 
