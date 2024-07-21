@@ -7,11 +7,15 @@ import {
   deleteUserById,
   fetchUserById,
   fetchUsers,
+  serverConnect,
   updateUserById
 } from "../Controllers/user_controller.js";
 
 //creating router
 const router = express.Router();
+
+//basic endpoint for server connection
+router.get('/', serverConnect);
 
 //CRUD operation endpoint for Users
 router.get('/get-users', fetchUsers);
