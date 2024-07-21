@@ -30,6 +30,18 @@ app.use(express.json());
 //calling connectdb to connect dbs
 connectDB();
 
+//server connect response
+app.get('/', (req, res)=>{
+    try {
+        //sending success response
+        res.status(200).json({message : `User CRUD API server connected successfully!`});
+    } catch (error) {
+         //sending error response, if any error happened
+        console.log(`Error in connecting server : ${error}`);
+        res.status(500).json({error : `Failed to connect the server, Internal Server Error`});
+    }
+});
+
 //Initialize routing
 app.use('/user-api', userRoute);
 
